@@ -1,0 +1,42 @@
+.title-style {
+  position: relative;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: max-content 1fr;
+  transition: all 0.5s;
+
+  * {
+    transition: all 0.5s;
+  }
+
+  h2 {
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: $main-color;
+  }
+}
+
+.title-style__animation {
+  position: relative;
+  margin-top: 15px;
+  width: 3.55px;
+  height: 1px;
+  background: $main-color;
+  opacity: 0.8;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background: white;
+    opacity: 0;
+    border-radius: 50%;
+    left: 4px;
+    top: calc(50% - 1px / 2);
+    transform: translateY(-50%);
+  }
+}

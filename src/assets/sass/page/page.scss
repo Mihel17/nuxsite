@@ -1,37 +1,23 @@
 .page {
   margin: 0;
   padding: 0;
-  // overflow-x: hidden;
 }
 
-html {
-  .page__body {
-    // width: 100vw;
-    min-height: 100vh;
-    font-family: $font;
-    font-weight: 500;
-    // font-size: 23.5px;
-    font-size: 18px;
-    line-height: 1.2;
-    display: grid;
-    grid-template-rows: min-content 1fr;
-    // grid-template-areas:
-    //   "header"
-    //   "main"
-    //   "footer";
-    margin: 0;
-    padding: 0;
-    // overflow-x: hidden;
-    // overflow-y: scroll;
-    color: $black;
-    background: white;
-  }
+.page__body {
+  min-height: 100vh;
+  max-width: 100vw;
+  overflow-x: hidden;
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  margin: 0;
+  padding: 0;
+  background: white;
+  // text
+  font-family: $font;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: $black;
 }
-
-// .page__main {
-//   grid-area: main;
-// }
-
-// .page__footer {
-//   grid-area: footer;
-// }

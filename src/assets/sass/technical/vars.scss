@@ -1,22 +1,7 @@
 // COLOR------------------------------
-// $main-color: #4285f4;
-$main-color: #082cd9;
-// $red: #e71a1a;
-$red: #b70001;
-$text-color: white;
-// $main-color: #104c8f;
-// $bg-color: #2a2b2e;
-$bg-color: #202124;
-// $light-main-color: #202124; //dark them
-$light-main-color: #181818; //dark them
-$light-blue: #f3f3f3; //light them
-$fb-bg: #f5f6f7;
-
-$grey: #7d8084;
-$light-grey: #e2e3e5;
-$green: #34a853;
-$black: rgba(black, 0.87);
-$light-black: rgba(black, 0.4);
+$main-color: #440090;
+$light-purple: #7c7cff;
+$black: rgba(black, 0.7);
 //-----------------------------------
 
 //RADIUS-------------------------------
@@ -42,19 +27,15 @@ $min-height-button: 48px;
 //-----------------------------------
 
 //FONT SIZE-------------------------------
-$h1: calc(1.575rem + 2vw) !important;
-$h2: 1.5rem !important;
-$h3: 18px !important;
-$small-text: 14px !important;
+// $h1: calc(1.575rem + 2vw) !important;
+// $h2: 1.5rem !important;
+// $h3: 18px !important;
+// $small-text: 14px !important;
 //-----------------------------------
 
 //FONT-------------------------------
-$font: "Roboto", Roboto, roboto, "roboto", -apple-system, "BlinkMacSystemFontb", "Segoe UI", helvetica, arial,
-  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
-// $font: "Baloo Tamma 2", cursive;
-// $font: "Baloo Bhai 2", cursive;
-// $font: "Baloo Bhaijaan 2", cursive, roboto, "roboto", -apple-system, "BlinkMacSystemFontb", "Segoe UI", helvetica, arial,
-//   sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font: "Montserrat", -apple-system, "BlinkMacSystemFontb", "Segoe UI", helvetica, arial, sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol";
 //-----------------------------------
 
 //MEDIA------------------------------
@@ -63,8 +44,8 @@ $xs: 320px;
 $sm: 576px;
 $md: 768px;
 $lg: 992px;
-$xl: 1200px;
-$xxl: 1400px;
+$xl: 1440px;
+$xxl: 1919px;
 
 $mobile: $xs;
 $mobile2: $sm;

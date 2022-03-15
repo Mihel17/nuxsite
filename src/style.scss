@@ -1,40 +1,41 @@
 //BOOSTRAP--------------------------
-// @import "./node_modules/bootstrap/scss/functions";
-// @import "./node_modules/bootstrap/scss/variables";
-// @import "./node_modules/bootstrap/scss/mixins";
-// @import "./node_modules/bootstrap/scss/grid";
-// @import "./node_modules/bootstrap/scss/containers";
-// @import "./node_modules/bootstrap/scss/bootstrap.scss";
+// @import "node_modules/bootstrap/scss/functions";
+// @import "node_modules/bootstrap/scss/variables";
+// @import "node_modules/bootstrap/scss/mixins";
+// @import "node_modules/bootstrap/scss/grid";
+// @import "node_modules/bootstrap/scss/containers";
+// @import "node_modules/bootstrap/scss/bootstrap.scss";
 //-----------------------------------
 
 //TECHNICAL--------------------------
-// @import "./assets/sass/technical/mixin.scss";
-@import "./assets/sass/technical/fonts.scss";
-@import "./assets/sass/technical/vars.scss";
-@import "./assets/sass/technical/technical.scss";
+// @import "assets/sass/technical/mixin.scss";
+@import "assets/sass/technical/fonts.scss";
+@import "assets/sass/technical/vars.scss";
+@import "assets/sass/technical/technical.scss";
 //-----------------------------------
 
 //PAGE-------------------------------
-@import "./assets/sass/page/page.scss";
-// @import "./assets/sass/blocks/big/inner-page.scss";
+@import "assets/sass/page/page.scss";
+// @import "assets/sass/blocks/big/inner-page.scss";
 //-----------------------------------
 
 //MAIN-------------------------------
-@import "./assets/sass/page/main-header.scss";
-@import "./assets/sass/page/main-content.scss";
+@import "assets/sass/page/main-header.scss";
+@import "assets/sass/page/main-content.scss";
 // @import "blocks/big/main-footer.scss";
 //-----------------------------------
 
 //SECTION---------------------------
-@import "./assets/sass/section/about.scss";
+@import "assets/sass/section/pricing.scss";
 //----------------------------------
 
 //BEM BLOCKS------------------------
-@import "./assets/sass/bem/logo.scss";
-// @import "./assets/sass/bem/social.scss";
-// @import "./assets/sass/bem/cards.scss";
+@import "assets/sass/bem/title.scss";
+@import "assets/sass/bem/title-style.scss";
+// @import "assets/sass/bem/social.scss";
+// @import "assets/sass/bem/cards.scss";
 //----------------------------------
 
 //FOR JS----------------------------
-// @import "./assets/sass/technical/script.scss";
+// @import "assets/sass/technical/script.scss";
 //----------------------------------

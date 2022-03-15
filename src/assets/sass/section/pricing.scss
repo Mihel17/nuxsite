@@ -1,0 +1,282 @@
+.pricing__item {
+  padding: 10px 10px 30px;
+  border: 1px solid transparent;
+  transition: all 0.4s;
+
+  @media (min-width: $tablet) {
+    padding: 10px 20px 30px;
+  }
+
+  @media (min-width: $desktop) {
+    display: grid;
+    padding: 28px 20px 62px;
+  }
+}
+
+.pricing__item:not(:first-child) {
+  .pricing__item-features-title {
+    @media (min-width: $desktop) {
+      color: white;
+    }
+  }
+}
+
+.pricing__item:nth-child(1),
+.pricing__item:nth-child(3) {
+  .pricing__item-offer {
+    z-index: 1;
+
+    @media (min-width: $tablet) {
+      &::before {
+        content: "7% from GGR*";
+        position: absolute;
+        left: 0;
+        width: calc(100% * 2);
+        height: 100%;
+        background: $main-color;
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+.pricing__item:nth-child(1) {
+  .pricing__item-offer {
+    z-index: 2;
+
+    @media (min-width: $desktop) {
+      &::before {
+        content: "7% from GGR*";
+        position: absolute;
+        left: -20px;
+        width: calc((100% + 40px) * 4);
+        height: 100%;
+        background: $main-color;
+      }
+    }
+  }
+}
+
+.pricing__item:nth-child(3) {
+  @media (min-width: $desktop) {
+    .pricing__item-offer {
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+.pricing__item:hover,
+.pricing__item:active,
+.pricing__item:focus {
+  border: 1px solid $light-purple;
+  border-top-color: transparent;
+
+  .title-style {
+    gap: 20px;
+
+    .title-style__animation {
+      width: 20px;
+      opacity: 1;
+
+      &::before {
+        opacity: 1;
+        left: 91%;
+        background: $main-color;
+      }
+    }
+  }
+}
+
+.pricing__item-title {
+  h2 {
+    margin-bottom: 15px;
+    overflow: hidden;
+
+    @media (min-width: $tablet) {
+      min-height: 65px;
+      max-height: 65px;
+      margin-bottom: 10px;
+    }
+
+    @media (min-width: $desktop) {
+      min-height: 65px;
+      max-height: 65px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.pricing__item-description {
+  margin-bottom: 20px;
+
+  @media (min-width: $desktop) {
+    margin-bottom: 0;
+    min-height: 95px;
+    max-height: 95px;
+    overflow: hidden;
+  }
+}
+
+.pricing__item-offer {
+  position: relative;
+  margin: 0 -26px;
+  height: 50px;
+  background-color: $main-color;
+  color: white;
+  text-align: center;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 42px;
+  display: grid;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+
+  @media (min-width: $tablet) {
+    background-color: white;
+    margin: 0 -21px;
+  }
+
+  @media (min-width: $desktop) {
+    height: 70px;
+    width: 100%;
+    margin: 0;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  &::before {
+    display: grid;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+  }
+}
+
+.pricing__list {
+  display: grid;
+  row-gap: 30px;
+
+  @media (min-width: $tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 50px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 31px;
+  }
+}
+
+.pricing__item-features-title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: $main-color;
+  margin: 20px 0 10px;
+
+  @media (min-width: $desktop) {
+    margin: 30px 0 15px;
+  }
+}
+
+.pricing__item-features {
+  list-style-type: none;
+  counter-reset: num;
+  display: grid;
+  gap: 5px;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet) {
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $desktop) {
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  li::before {
+    content: counter(num) " ";
+    counter-increment: num;
+    color: $main-color;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 40px;
+  }
+}
+
+.pricing__item-feature {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 15px;
+  align-items: center;
+  align-content: center;
+  line-height: 20px;
+}
+
+.pricing .pricing__btn {
+  min-width: max-content;
+  position: relative;
+  display: grid;
+  grid-template-columns: max-content max-content;
+  gap: 10px;
+  transition: all 0.3s;
+  margin: 0;
+
+  &::after {
+    content: "";
+    display: grid;
+    width: 50px;
+    height: 16px;
+    background: url("data:image/svg+xml;charset=UTF-8,%3csvg fill='none' height='16' viewBox='0 0 50 16' width='50' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3cclipPath id='a'%3e%3cpath d='m0 0h50v16.0001h-50z'/%3e%3c/clipPath%3e%3cg clip-path='url(%23a)' stroke='%23440090'%3e%3cpath d='m44 11.1716v-6.34317l3.1716 3.17158z' fill='%23c4c4c4' stroke-width='4'/%3e%3cpath d='m42 8h-42' stroke-width='3'/%3e%3c/g%3e%3c/svg%3e")
+      center center;
+  }
+}
+
+.pricing__btn:hover,
+.pricing__btn:active {
+  gap: 20px;
+}
+
+.pricing__message {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.7);
+  margin-top: 30px;
+  display: grid;
+  gap: 10px;
+
+  @media (min-width: $tablet) {
+    margin-top: 70px;
+  }
+
+  @media (min-width: $desktop) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+  }
+}
+
+.pricing__message-link {
+  font-size: 19px;
+  font-weight: 900;
+  color: $light-purple;
+  transition: all 0.4s;
+}
+
+.pricing__message-link:hover,
+.pricing__message-link:active,
+.pricing__message-link:focus {
+  color: $main-color;
+}

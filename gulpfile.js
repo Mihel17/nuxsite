@@ -23,26 +23,6 @@ const styles = () => {
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
-
-    //css optimization
-    // .pipe(uncss({
-    //   html: ['dist/index.html'],
-    //   ignore: [
-    //     '.modal-open',
-    //     '.modal-backdrop',
-    //     '.fade',
-    //     '.show',
-    //     '.off-scroll',
-    //     '.modal-header__content::before',
-    //     '#staticBackdrop',
-    //     '.modal.fade .modal-dialog',
-    //     '.modal-dialog',
-    //     'off-scroll',
-    //     'animation__active'
-    //   ]
-    // }))
-    //css optimization
-
     .pipe(postcss([
       autoprefixer(),
       csso()
@@ -161,6 +141,16 @@ const copy = (done) => {
 }
 exports.copy = copy;
 
+const copyStyle = (done) => {
+  gulp.src([
+    "src/assets/css/*.css",
+
+  ])
+    .pipe(gulp.dest("dist/css"))
+  done();
+}
+exports.copy = copyStyle;
+
 
 // Clean
 
@@ -222,6 +212,7 @@ const webpackRun = (done) => {
 const build = gulp.series(
   clean,
   copy,
+  copyStyle,
   gulp.parallel(
     styles,
     html,
@@ -239,6 +230,7 @@ exports.build = build;
 exports.default = gulp.series(
   clean,
   copy,
+  copyStyle,
   gulp.parallel(
     styles,
     html,
