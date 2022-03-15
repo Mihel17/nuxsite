@@ -4,10 +4,10 @@
 @@include('layout/head.html')
 
 <body class="page__body">
-  <?php require 'layout/TEST/dont_copy_header_get_from_backend.php'; ?>
+  <?php require 'layout/TEST/GET_FROM_BACKEND_header.php'; ?>
 
   <main class="page__main  main-content">
-    <?php require 'layout/TEST/dont_copy_breadcrumbs_get_from_backend.php'; ?>
+    <?php require 'layout/TEST/GET_FROM_BACKEND_breadcrumbs.php'; ?>
 
 
     <div class="container  container--pricing">
@@ -22,7 +22,7 @@
 <!-- MAIN-CONTENT -->
 
 
-  <?php require 'layout/TEST/dont_copy_footer_get_from_backend.php'; ?>
+  <?php require 'layout/TEST/GET_FROM_BACKEND_footer.php'; ?>
   <script src=" ./js/script.js" type="module">
   </script>
 </body>
