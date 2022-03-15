@@ -1,0 +1,151 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+// WRAPPER
+
+.container,
+.site-content {
+  width: 100%;
+  max-width: 1980px;
+  margin: 0 auto;
+}
+
+.container,
+.site-content,
+.wrapper {
+  padding: 0 1em;
+
+  @media (min-width: $mobile2) {
+    padding: 0 1em;
+  }
+
+  @media (min-width: 800px) {
+    padding: 0 2em;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0 140px;
+  }
+}
+
+//H1-H6
+
+h1,
+.h1 {
+  font-size: $h1;
+  font-weight: 600;
+  line-height: 1;
+}
+
+h2 {
+  font-size: $h2;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: $h3;
+  font-weight: 600;
+}
+
+//INPUT
+
+input {
+  width: 100%;
+}
+
+// HIDE / SHOW
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.vh {
+  max-height: 1px;
+  overflow: hidden;
+  // opacity: 0 ;
+  pointer-events: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+// IMG
+
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+// BTN
+
+.btn {
+  background: white;
+  color: $black;
+  border: none;
+  outline: 2.5px solid $black;
+
+  a,
+  * {
+    transition: all 0.3s;
+    color: $black;
+  }
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus {
+  color: $main-color;
+  border: none;
+  outline: 2.5px solid $main-color;
+
+  a,
+  * {
+    color: $main-color;
+  }
+}
+
+body {
+  button,
+  a {
+    cursor: pointer;
+    font-size: 16px;
+  }
+}
+
+// LINK
+
+.no-style {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+// NORMILIZE AND CUSTOMIZE
+
+//-----------------------------------
