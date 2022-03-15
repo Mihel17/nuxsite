@@ -64,8 +64,6 @@ const webpOptimized = () => {
 
 const createWebp = () => {
   return gulp.src("src/img/**/*.{jpg,png}")
-
-
     .pipe(webp({
       quality: 100,
       method: 0,
@@ -98,31 +96,7 @@ const spriteMin = () => {
     }))
     .pipe(gulp.dest("dist/img/svg"));
 }
-
-// const sprite = () => {
-//   return gulp.src("src/img/**/*.svg")
-//     .pipe(svgstore({
-//       inlineSvg: true
-//     }))
-//     .pipe(cheerio({
-//       run: ($) => {
-//         $('[fill]').removeAttr('fill');
-//       },
-//       parserOptions: { xmlMode: true }
-//     }))
-//     .pipe(rename("sprite.svg"))
-//     .pipe(gulp.dest("dist/img/svg"));
-// }
-
-// const svg = () => {
-//   return gulp.src("src/img/**/*.svg")
-//     .pipe(svgo())
-//     .pipe(gulp.dest("dist/img/svg/min"));
-// }
-
 exports.spriteMin = spriteMin;
-// exports.sprite = sprite;
-// exports.svg = svg;
 
 
 // Copy
@@ -141,15 +115,15 @@ const copy = (done) => {
 }
 exports.copy = copy;
 
-const copyStyle = (done) => {
-  gulp.src([
-    "src/assets/css/*.css",
+// const copyStyle = (done) => {
+//   gulp.src([
+//     "src/assets/css/*.css",
 
-  ])
-    .pipe(gulp.dest("dist/css"))
-  done();
-}
-exports.copy = copyStyle;
+//   ])
+//     .pipe(gulp.dest("dist/css"))
+//   done();
+// }
+// exports.copy = copyStyle;
 
 
 // Clean
@@ -212,7 +186,7 @@ const webpackRun = (done) => {
 const build = gulp.series(
   clean,
   copy,
-  copyStyle,
+  // copyStyle,
   gulp.parallel(
     styles,
     html,
@@ -230,7 +204,7 @@ exports.build = build;
 exports.default = gulp.series(
   clean,
   copy,
-  copyStyle,
+  // copyStyle,
   gulp.parallel(
     styles,
     html,
