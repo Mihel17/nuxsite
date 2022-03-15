@@ -11,10 +11,10 @@
 
 
     <div class="container  container--pricing">
-      <h1 class="zcwf_title  gradient  title  title--pricing">PRICING</h1>
+      <h1 class="gradient  title  title--pricing">PRICING</h1>
       <!-- H1 -->
       <?php require 'layout/section/pricing.php'; ?>
-      <!-- SECTION/PRICING -->
+      <!-- SECTION-PRICING -->
     </div>
     <!-- CONTAINER-PRICING -->
 
