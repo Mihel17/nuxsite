@@ -16,6 +16,10 @@ const fileinclude = require('gulp-file-include');
 const sync = require("browser-sync").create();
 const uncss = require('gulp-uncss');
 
+
+const PATH_TO_DIST = '/OpenServer/domains/nuxsite'
+
+
 // Styles
 
 const styles = () => {
@@ -33,6 +37,7 @@ const styles = () => {
     }))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("dist/css"))
+    .pipe(gulp.dest(`${PATH_TO_DIST}/css`))
     .pipe(sync.stream());
 }
 
@@ -41,13 +46,17 @@ exports.styles = styles;
 // HTML
 
 const html = () => {
-  return gulp.src("src/*.html")
+  return gulp.src("src/*.php")
     .pipe(fileinclude())
     .pipe(htmlmin({
       collapseWhitespace: true,
       removeComments: true
     }))
-    .pipe(gulp.dest("dist"));
+    .pipe(rename({
+      extname: ".php"
+    }))
+    .pipe(gulp.dest("dist"))
+    .pipe(gulp.dest(PATH_TO_DIST));
 }
 
 // WebP
@@ -59,7 +68,8 @@ const webpOptimized = () => {
       method: 6,
       sns: 0
     }))
-    .pipe(gulp.dest("dist/img"));
+    .pipe(gulp.dest("dist/img"))
+    .pipe(gulp.dest(`${PATH_TO_DIST}/img`));
 }
 
 const createWebp = () => {
@@ -69,7 +79,8 @@ const createWebp = () => {
       method: 0,
       sns: 0
     }))
-    .pipe(gulp.dest("dist/img"));
+    .pipe(gulp.dest("dist/img"))
+    .pipe(gulp.dest(`${PATH_TO_DIST}/img`));
 }
 
 exports.webpOptimized = webpOptimized;
@@ -94,7 +105,8 @@ const spriteMin = () => {
       suffix: ".min",
       extname: ".svg"
     }))
-    .pipe(gulp.dest("dist/img/svg"));
+    .pipe(gulp.dest("dist/img/svg"))
+    .pipe(gulp.dest(`${PATH_TO_DIST}/img/svg`));
 }
 exports.spriteMin = spriteMin;
 
@@ -105,12 +117,14 @@ const copy = (done) => {
     "src/assets/fonts/*.{woff2,woff}",
     "src/assets/favicon/**/*",
     "src/assets/img/icons/*.svg",
+    "src/layout/**/*.php",
     // "src/assets/leafleat/**/*",
     // "src/assets/img/promo.webp"
   ], {
     base: "src"
   })
     .pipe(gulp.dest("dist"))
+    .pipe(gulp.dest(PATH_TO_DIST))
   done();
 }
 exports.copy = copy;
@@ -130,8 +144,8 @@ exports.copy = copy;
 
 const clean = () => {
   return del("dist");
+  // return del(PATH_TO_DIST);
 };
-
 exports.clean = clean;
 
 // Server
@@ -147,7 +161,6 @@ const server = (done) => {
   });
   done();
 }
-
 exports.server = server;
 
 // Reload
@@ -176,7 +189,8 @@ const webpackConfig = require('./webpack.config.js');
 const webpackRun = (done) => {
   gulp.src('./src/script.js')
     .pipe(webpackStream(webpackConfig), webpack)
-    .pipe(gulp.dest('./dist/js'));
+    .pipe(gulp.dest('./dist/js'))
+    .pipe(gulp.dest(`${PATH_TO_DIST}/js`));
   done();
 }
 
