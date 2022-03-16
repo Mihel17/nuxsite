@@ -6,7 +6,7 @@
 <body class="page__body">
   <?php require 'layout/TEST/GET_FROM_BACKEND_header.php'; ?>
 
-  <main class="page__main  main-content">
+  <main class="page__main  main-content  main-content--pricing">
     <?php require 'layout/TEST/GET_FROM_BACKEND_breadcrumbs.php'; ?>
 
 
@@ -19,7 +19,7 @@
     <!-- CONTAINER-PRICING -->
 
   </main>
-<!-- MAIN-CONTENT -->
+  <!-- MAIN-CONTENT -->
 
 
   <?php require 'layout/TEST/GET_FROM_BACKEND_footer.php'; ?>
