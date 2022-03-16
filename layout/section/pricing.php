@@ -25,7 +25,7 @@
         <h2>Turnkey</h2>
       </div>
       <!-- pricing__item-title -->
-      <p class="pricing__item-description">Fast integration of iGaming content to your brand.</p>
+      <p class="pricing__item-description">Ready-to-launch iGaming website in 48 hours.</p>
       <p class="pricing__item-offer">7% from GGR*</p>
       <p class="pricing__item-features-title">features</p>
       <ol class="pricing__item-features">
@@ -43,7 +43,7 @@
         <h2>Sport <br> Engine</h2>
       </div>
       <!-- pricing__item-title -->
-      <p class="pricing__item-description">Fast integration of iGaming content to your brand.</p>
+      <p class="pricing__item-description">Software solution for starting a sportsbook of your own.</p>
       <p class="pricing__item-offer">7% from GGR*</p>
       <p class="pricing__item-features-title">features</p>
       <ol class="pricing__item-features">
@@ -61,7 +61,7 @@
         <h2>SRetail</h2>
       </div>
       <!-- pricing__item-title -->
-      <p class="pricing__item-description">Fast integration of iGaming content to your brand.</p>
+      <p class="pricing__item-description">Land-based betting shop solution.</p>
       <p class="pricing__item-offer">7% from GGR*</p>
       <p class="pricing__item-features-title">features</p>
       <ol class="pricing__item-features">
