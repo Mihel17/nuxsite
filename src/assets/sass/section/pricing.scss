@@ -4,11 +4,12 @@
   transition: all 0.4s;
 
   @media (min-width: $tablet) {
-    padding: 10px 20px 30px;
+    display: grid;
+    grid-template-rows: max-content 1fr max-content;
+    padding: 40px 20px 40px;
   }
 
   @media (min-width: $desktop) {
-    display: grid;
     padding: 28px 20px 62px;
   }
 }
@@ -35,6 +36,7 @@
         height: 100%;
         background: $main-color;
         pointer-events: none;
+        color: white;
       }
     }
   }
@@ -136,7 +138,8 @@
   justify-items: center;
 
   @media (min-width: $tablet) {
-    background-color: white;
+    background-color: transparent;
+    color: transparent;
     margin: 0 -21px;
   }
 
@@ -164,7 +167,7 @@
 
   @media (min-width: $tablet) {
     grid-template-columns: repeat(2, 1fr);
-    row-gap: 50px;
+    row-gap: 0;
   }
 
   @media (min-width: $desktop) {
@@ -278,5 +281,5 @@
 .pricing__message-link:hover,
 .pricing__message-link:active,
 .pricing__message-link:focus {
-  color: $main-color;
+  color: rgba($light-purple, 0.8);
 }
